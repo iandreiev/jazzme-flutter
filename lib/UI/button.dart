@@ -25,6 +25,7 @@ class JazzBTN extends StatelessWidget {
         padding: EdgeInsets.fromLTRB(24, 14, 24, 14),
         child: Row(
           mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Text(title,
                 style: TextStyle(

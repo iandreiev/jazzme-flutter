@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jazzme_flutter/jazz_me_icons_icons.dart';
 import '../wallet.dart';
 import '../home.dart';
+import '../qrscanner.dart';
 
 class JazzBar extends StatelessWidget implements PreferredSizeWidget {
   final double _preferredHeight = 100.0;
@@ -39,10 +40,10 @@ class JazzBar extends StatelessWidget implements PreferredSizeWidget {
             new IconButton(
               icon: new Icon(JazzMeIcons.ic_qr),
               onPressed: () {
-                // Navigator.push(
-                //   context,
-                //   new MaterialPageRoute(builder: (context) => new HomePage()),
-                // );
+                Navigator.push(
+                  context,
+                  new MaterialPageRoute(builder: (context) => new QRScanPage()),
+                );
                 print("QR");
               },
             ),

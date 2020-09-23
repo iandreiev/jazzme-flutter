@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:jazzme_flutter/jazz_me_icons_icons.dart';
+import 'package:jazzme_flutter/topup.dart';
+import 'package:jazzme_flutter/transfer.dart';
+import 'package:jazzme_flutter/withdraw.dart';
 import 'UI/appbar.dart';
 import 'UI/wallet_card.dart';
 import 'UI/circle_button.dart';
@@ -77,7 +80,11 @@ class _WalletPageState extends State<WalletPage> {
                     icon: JazzMeIcons.transfers,
                     semanticTitle: "Send",
                     onPressed: () {
-                      print("Call heart");
+                      Navigator.push(
+                        context,
+                        new MaterialPageRoute(
+                            builder: (context) => new TransfersPage()),
+                      );
                     },
                   ),
                   JazzCircleBTN(
@@ -87,7 +94,11 @@ class _WalletPageState extends State<WalletPage> {
                     icon: JazzMeIcons.post,
                     semanticTitle: "Withdraw",
                     onPressed: () {
-                      print("Withdraw");
+                      Navigator.push(
+                        context,
+                        new MaterialPageRoute(
+                            builder: (context) => new WithdrawPage()),
+                      );
                     },
                   ),
                   JazzCircleBTN(
@@ -97,7 +108,11 @@ class _WalletPageState extends State<WalletPage> {
                     icon: JazzMeIcons.get_icon,
                     semanticTitle: "Top up",
                     onPressed: () {
-                      print("Top Up");
+                      Navigator.push(
+                        context,
+                        new MaterialPageRoute(
+                            builder: (context) => new TopUpPage()),
+                      );
                     },
                   )
                 ],

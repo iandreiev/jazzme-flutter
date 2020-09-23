@@ -22,7 +22,7 @@ class Post {
       type: json['type'] as int,
       title: json['title'] as String,
       author: json['author'] as String,
-      content: json['content'] as String,
+      content: json['body'] as String,
       file: json['file'] as String,
       createdAt: json['created_at'] as String,
     );

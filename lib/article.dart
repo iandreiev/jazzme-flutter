@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jazzme_flutter/http_service.dart';
 import 'package:jazzme_flutter/Models/post.dart';
 import 'UI/appbar.dart';
+import 'article_detail.dart';
 
 class PostsPage extends StatelessWidget {
   final HttpService httpService = HttpService();
@@ -22,12 +23,18 @@ class PostsPage extends StatelessWidget {
                 children: posts
                     .map((Post post) => ListTile(
                           title: Text(post.title),
+                          subtitle: Text(post.id.toString()),
+                          onTap: () =>
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => ArticleDetail(
+                                        post: post,
+                                      ))),
                         ))
                     .toList(),
               );
             }
 
-            // return Center(child: CircularProgressIndicator());
+            return Center(child: CircularProgressIndicator());
           }),
     );
   }
